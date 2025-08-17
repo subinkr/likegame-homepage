@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { 
   Zap, 
   Globe, 
@@ -414,10 +415,24 @@ const CTASection = () => {
         >
           <p style={{
             color: 'rgba(255, 255, 255, 0.6)',
-            fontSize: '0.9rem'
+            fontSize: '0.9rem',
+            marginBottom: '12px'
           }}>
             © 2025 LikeGame. 일상의 작업을 에픽 퀘스트로 변환하세요.
           </p>
+          <Link 
+            to="/privacy"
+            style={{
+              color: 'rgba(255, 255, 255, 0.6)',
+              fontSize: '0.9rem',
+              textDecoration: 'none',
+              transition: 'color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.8)'}
+            onMouseLeave={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}
+          >
+            개인정보 처리방침
+          </Link>
         </motion.div>
       </div>
 
