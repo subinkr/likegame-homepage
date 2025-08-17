@@ -123,7 +123,8 @@ const HeroSection = () => {
                 </motion.a>
               </div>
 
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              {/* App Store and Google Play buttons hidden for now */}
+              {/* <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <motion.a
                   href="#"
                   className="btn btn-secondary"
@@ -150,7 +151,7 @@ const HeroSection = () => {
                   <Smartphone size={20} />
                   구글 플레이
                 </motion.a>
-              </div>
+              </div> */}
             </motion.div>
 
             {/* Key Benefits */}
@@ -224,17 +225,17 @@ const HeroSection = () => {
                     marginRight: '12px'
                   }}></div>
                   <div>
-                                      <div style={{ fontWeight: '600', fontSize: '18px' }}>지구</div>
-                  <div style={{ fontSize: '14px', opacity: '0.7' }}>레벨 4 • 4/20 완료</div>
+                                      <div style={{ fontWeight: '600', fontSize: '18px' }}>근력</div>
+                  <div style={{ fontSize: '14px', opacity: '0.7' }}>레벨 2 • 2/20 완료</div>
                   </div>
                 </div>
 
                 {/* Quest Items */}
                 {[
-                  { title: '🚶‍♂️ 걷기 2분을 멈추지 않고 했다', xp: 'Lv.1', completed: true },
-                  { title: '🚶‍♂️ 걷기 5분을 멈추지 않고 했다', xp: 'Lv.2', completed: true },
-                  { title: '🚶‍♂️ 걷기 10분을 멈추지 않고 했다', xp: 'Lv.3', completed: true },
-                  { title: '🚶‍♂️ 걷기 15분을 멈추지 않고 했다', xp: 'Lv.4', completed: true }
+                  { title: '🏃‍♂️ 인클라인 푸시업을 12회 했다', xp: 'Lv.41', completed: true },
+                  { title: '💪 불가리안 스플릿 스쿼트를 양쪽 각 8회 했다', xp: 'Lv.42', completed: false },
+                  { title: '🦵 싱글 레그 카프 레이즈를 양쪽 각 15회 했다', xp: 'Lv.43', completed: false },
+                  { title: '🏋️ 힙 힌지를 20회 했다', xp: 'Lv.44', completed: true }
                 ].map((quest, index) => (
                   <motion.div
                     key={index}
@@ -255,7 +256,9 @@ const HeroSection = () => {
                   >
                     <div style={{
                       textDecoration: quest.completed ? 'line-through' : 'none',
-                      fontSize: '14px'
+                      fontSize: '14px',
+                      wordBreak: 'break-word',
+                      lineHeight: '1.4'
                     }}>
                       {quest.title}
                     </div>
@@ -281,8 +284,8 @@ const HeroSection = () => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1 }}
                 >
-                  <div style={{ fontSize: '14px', marginBottom: '4px' }}>E 등급 진행률</div>
-                  <div style={{ fontSize: '20px', fontWeight: '700' }}>4/20</div>
+                  <div style={{ fontSize: '14px', marginBottom: '4px' }}>C 등급 진행률</div>
+                  <div style={{ fontSize: '20px', fontWeight: '700' }}>2/20</div>
                 </motion.div>
               </div>
             </motion.div>
