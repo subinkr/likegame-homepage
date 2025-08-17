@@ -224,17 +224,17 @@ const HeroSection = () => {
                     marginRight: '12px'
                   }}></div>
                   <div>
-                                      <div style={{ fontWeight: '600', fontSize: '18px' }}>일일 퀘스트</div>
-                  <div style={{ fontSize: '14px', opacity: '0.7' }}>레벨 15 • 2,840 XP</div>
+                                      <div style={{ fontWeight: '600', fontSize: '18px' }}>지구</div>
+                  <div style={{ fontSize: '14px', opacity: '0.7' }}>레벨 4 • 4/20 완료</div>
                   </div>
                 </div>
 
                 {/* Quest Items */}
                 {[
-                  { title: '🏃‍♂️ 인클라인 푸시업을 12회 했다', xp: 'Lv.41', completed: true },
-                  { title: '💪 불가리안 스플릿 스쿼트를 양쪽 각 8회 했다', xp: 'Lv.42', completed: false },
-                  { title: '🦵 싱글 레그 카프 레이즈를 양쪽 각 15회 했다', xp: 'Lv.43', completed: false },
-                  { title: '🏋️ 힙 힌지를 20회 했다', xp: 'Lv.44', completed: true }
+                  { title: '🚶‍♂️ 걷기 2분을 멈추지 않고 했다', xp: 'Lv.1', completed: true },
+                  { title: '🚶‍♂️ 걷기 5분을 멈추지 않고 했다', xp: 'Lv.2', completed: true },
+                  { title: '🚶‍♂️ 걷기 10분을 멈추지 않고 했다', xp: 'Lv.3', completed: true },
+                  { title: '🚶‍♂️ 걷기 15분을 멈추지 않고 했다', xp: 'Lv.4', completed: true }
                 ].map((quest, index) => (
                   <motion.div
                     key={index}
@@ -281,8 +281,8 @@ const HeroSection = () => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1 }}
                 >
-                  <div style={{ fontSize: '14px', marginBottom: '4px' }}>C 등급 진행률</div>
-                  <div style={{ fontSize: '20px', fontWeight: '700' }}>2/20</div>
+                  <div style={{ fontSize: '14px', marginBottom: '4px' }}>E 등급 진행률</div>
+                  <div style={{ fontSize: '20px', fontWeight: '700' }}>4/20</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -346,20 +346,101 @@ const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
-          style={{
-            position: 'absolute',
-            bottom: '30px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            color: 'rgba(255, 255, 255, 0.7)'
-          }}
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div style={{ fontSize: '14px', marginBottom: '8px' }}>스크롤하여 탐험하기</div>
-          <div style={{ fontSize: '24px' }}>↓</div>
-        </motion.div>
+                    {/* Milestone Completion Popup */}
+            <motion.div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                background: 'white',
+                borderRadius: '50%',
+                width: '200px',
+                height: '200px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                zIndex: 10
+              }}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ 
+                scale: [0, 1.2, 1],
+                opacity: [0, 1, 1]
+              }}
+              transition={{ 
+                duration: 0.8,
+                delay: 2
+              }}
+            >
+              <motion.div
+                style={{
+                  fontSize: '48px',
+                  marginBottom: '16px'
+                }}
+                animate={{
+                  rotate: [0, 360],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: 2.5
+                }}
+              >
+                🎉
+              </motion.div>
+              <div style={{
+                fontSize: '24px',
+                fontWeight: '700',
+                color: '#fbbf24',
+                textShadow: '0 2px 4px rgba(251, 191, 36, 0.3)'
+              }}>
+                완료!
+              </div>
+            </motion.div>
+
+            {/* Bottom Notification Bar */}
+            <motion.div
+              style={{
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                right: '0',
+                background: '#22c55e',
+                color: 'white',
+                padding: '12px 20px',
+                textAlign: 'center',
+                fontSize: '14px',
+                fontWeight: '500',
+                zIndex: 5
+              }}
+              initial={{ y: 100 }}
+              animate={{ y: 0 }}
+              transition={{ 
+                duration: 0.5,
+                delay: 3
+              }}
+            >
+              <span style={{ marginRight: '8px' }}>🎉</span>
+              마일스톤을 완료했습니다!
+            </motion.div>
+
+            <motion.div
+              style={{
+                position: 'absolute',
+                bottom: '30px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                color: 'rgba(255, 255, 255, 0.7)'
+              }}
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <div style={{ fontSize: '14px', marginBottom: '8px' }}>스크롤하여 탐험하기</div>
+              <div style={{ fontSize: '24px' }}>↓</div>
+            </motion.div>
       </div>
 
       {/* Responsive Styles */}

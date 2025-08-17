@@ -33,7 +33,6 @@ const CTASection = () => {
   ]
 
   const benefits = [
-    "✅ 웹 버전 회원가입 불필요",
     "✅ 무료로 사용 가능",
     "✅ 모바일 앱 출시 예정",
     "✅ 정기적인 업데이트 및 개선"
@@ -417,7 +416,7 @@ const CTASection = () => {
             color: 'rgba(255, 255, 255, 0.6)',
             fontSize: '0.9rem'
           }}>
-            © 2024 LikeGame. 일상의 작업을 에픽 퀘스트로 변환하세요.
+            © 2025 LikeGame. 일상의 작업을 에픽 퀘스트로 변환하세요.
           </p>
         </motion.div>
       </div>
