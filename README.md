@@ -9,15 +9,15 @@ LikeGame의 공식 랜딩페이지입니다. 일상의 작업을 epic quest로 �
 - **Smooth Animations**: Framer Motion을 활용한 부드러운 애니메이션
 - **Mobile-First**: 모바일 우선 반응형 디자인
 - **SEO Optimized**: 완전한 SEO 메타태그 및 구조화된 데이터
-- **Cross-Platform**: 웹, iOS, Android 플랫폼 정보 제공
+- **Cross-Platform**: 웹 앱 제공, 모바일 앱 개발 중
 
 ## 📋 섹션 구성
 
 1. **Hero Section**: 메인 헤드라인과 앱 목업, 다운로드 버튼
 2. **Features Section**: 6가지 핵심 기능 소개
 3. **How It Works**: 4단계 사용 프로세스
-4. **Platform Section**: 웹/iOS/Android 플랫폼 정보
-5. **CTA Section**: 최종 전환 유도 및 통계
+4. **Platform Section**: 웹 앱 및 모바일 앱 개발 계획
+5. **CTA Section**: 최종 전환 유도 및 기능 소개
 
 ## 🛠️ 기술 스택
 
@@ -156,6 +156,6 @@ npm run build
 
 ## 📞 연락처
 
-LikeGame Team - info@likegame.life
+LikeGame Team - support@likegame.life
 
 Project Link: [https://github.com/likegame/homepage](https://github.com/likegame/homepage)

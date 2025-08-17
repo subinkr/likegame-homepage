@@ -13,38 +13,38 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: Target,
-      title: "Quest System",
-      description: "Create quests with RPG-style difficulty levels. Transform mundane tasks into exciting adventures with customizable challenges.",
+      title: "퀘스트 시스템",
+      description: "A, B, C, D, E, F 등급의 난이도로 퀘스트를 생성하세요. 프로그래밍, 건강, 학습 등 다양한 카테고리의 작업을 게임화합니다.",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
       icon: TrendingUp,
-      title: "Skill Progression",
-      description: "Level up your skills as you complete tasks. Track your growth across different areas of your life with detailed analytics.",
+      title: "스탯 시스템",
+      description: "근력, 민첩, 지구력 등 다양한 스탯을 레벨업하세요. 각 스탯은 20단계로 구성되어 체계적인 성장을 추적합니다.",
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
     {
       icon: ShoppingBag,
-      title: "Template Marketplace",
-      description: "Choose from hundreds of pre-made quest templates. Get started instantly with proven productivity systems.",
+      title: "템플릿 시스템",
+      description: "기본 일일 루틴, 프로그래밍 마스터 로드맵 등 다양한 템플릿을 선택하세요. 자기계발, 학습, 건강 카테고리로 분류되어 있습니다.",
       gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
     },
     {
       icon: Share2,
-      title: "Social Sharing",
-      description: "Share your achievements and progress with friends. Build accountability through community engagement.",
+      title: "소셜 공유",
+      description: "친구들과 성취와 진행 상황을 공유하세요. 커뮤니티 참여를 통해 책임감을 구축합니다.",
       gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
     },
     {
       icon: Award,
-      title: "Achievement System",
-      description: "Unlock badges and rewards as you reach milestones. Celebrate your wins with beautiful visual achievements.",
+      title: "마일스톤 시스템",
+      description: "퀘스트를 완료하면서 마일스톤을 달성하세요. 완료 시 축하 팝업과 함께 성취감을 느껴보세요.",
       gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
     },
     {
       icon: RefreshCw,
-      title: "Cross-Platform Sync",
-      description: "Seamlessly sync across web, iOS, and Android. Your progress follows you everywhere you go.",
+      title: "서브태스크 시스템",
+      description: "퀘스트를 작은 서브태스크로 나누어 관리하세요. 진행률을 실시간으로 확인하고 체계적으로 완료해보세요.",
       gradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"
     }
   ]
@@ -93,13 +93,13 @@ const FeaturesSection = () => {
               marginBottom: '24px'
             }}
           >
-            Powerful Features for{' '}
+            에픽 생산성을 위한{' '}
             <span style={{
               background: 'var(--accent-gradient)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-              Epic Productivity
+              강력한 기능들
             </span>
           </motion.h2>
           <motion.p
@@ -110,7 +110,7 @@ const FeaturesSection = () => {
               margin: '0 auto'
             }}
           >
-            Discover the tools that will transform how you approach your daily tasks and long-term goals
+            일상의 작업과 장기 목표에 접근하는 방식을 바꿀 도구들을 발견하세요
           </motion.p>
         </motion.div>
 
@@ -238,7 +238,7 @@ const FeaturesSection = () => {
               marginBottom: '16px',
               fontSize: '1.1rem'
             }}>
-              Ready to transform your productivity?
+              생산성을 변화시킬 준비가 되셨나요?
             </p>
             <motion.a
               href="https://app.likegame.life"
@@ -247,7 +247,7 @@ const FeaturesSection = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Start Your First Quest
+              지금 시작하기
             </motion.a>
           </motion.div>
         </motion.div>
@@ -319,3 +319,4 @@ const FeaturesSection = () => {
 }
 
 export default FeaturesSection
+

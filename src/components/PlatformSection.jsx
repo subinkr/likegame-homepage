@@ -14,76 +14,76 @@ import {
 const PlatformSection = () => {
   const platforms = [
     {
-      name: "Web App",
+      name: "웹 앱",
       subtitle: "app.likegame.life",
       icon: Globe,
-      description: "Play instantly in your browser with full feature access",
+      description: "브라우저에서 즉시 시작하고 모든 기능을 사용하세요",
       features: [
-        "No download required",
-        "Full feature access",
-        "Cross-platform sync",
-        "Real-time updates",
-        "Desktop optimized"
+        "다운로드 불필요",
+        "모든 기능 사용 가능",
+        "실시간 업데이트",
+        "데스크톱 최적화",
+        "퀘스트 및 스탯 관리"
       ],
       color: "#667eea",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      buttonText: "Play on Web",
+      buttonText: "웹에서 시작하기",
       buttonLink: "https://app.likegame.life",
       isPrimary: true
     },
     {
-      name: "iOS App",
+      name: "iOS 앱",
       subtitle: "iPhone & iPad",
       icon: Smartphone,
-      description: "Native iOS experience optimized for Apple devices",
+      description: "Apple 기기에 최적화된 네이티브 iOS 경험",
       features: [
-        "Native iOS experience",
-        "Push notifications",
-        "Widget support",
+        "네이티브 iOS 경험",
+        "푸시 알림",
+        "위젯 지원",
         "Face ID / Touch ID",
-        "Apple Watch support"
+        "Apple Watch 지원"
       ],
       color: "#f093fb",
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      buttonText: "Download on App Store",
+      buttonText: "출시 예정",
       buttonLink: "#",
-      badge: "Coming Soon"
+      badge: "개발 중"
     },
     {
-      name: "Android App",
-      subtitle: "All Android Devices",
+      name: "Android 앱",
+      subtitle: "모든 Android 기기",
       icon: Monitor,
-      description: "Material Design interface for Android devices",
+      description: "Android 기기를 위한 Material Design 인터페이스",
       features: [
         "Material Design UI",
-        "Background sync",
-        "Widget support",
-        "Notification actions",
-        "Android shortcuts"
+        "백그라운드 동기화",
+        "위젯 지원",
+        "알림 액션",
+        "Android 단축키"
       ],
       color: "#43e97b",
       gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-      buttonText: "Get it on Google Play",
+      buttonText: "출시 예정",
       buttonLink: "#",
-      badge: "Coming Soon"
+      badge: "개발 중"
     }
   ]
 
   const syncFeatures = [
     {
       icon: RefreshCw,
-      title: "Real-time Sync",
-      description: "Your progress syncs instantly across all devices"
+      title: "실시간 동기화",
+      description: "모든 기기에서 즉시 진행 상황이 동기화됩니다"
     },
     {
       icon: Zap,
-      title: "Offline Mode",
-      description: "Continue your quests even without internet connection"
+      title: "오프라인 모드",
+      description: "인터넷 연결 없이도 퀘스트를 계속할 수 있습니다"
     },
     {
       icon: Bell,
-      title: "Smart Notifications",
-      description: "Get reminded about your quests at the perfect time"
+      title: "스마트 알림",
+      description: "완벽한 타이밍에 퀘스트에 대한 알림을 받으세요"
     }
   ]
 
@@ -131,13 +131,13 @@ const PlatformSection = () => {
               marginBottom: '24px'
             }}
           >
-            Available on{' '}
+            모든 플랫폼에서{' '}
             <span style={{
               background: 'var(--accent-gradient)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-              All Platforms
+              사용 가능
             </span>
           </motion.h2>
           <motion.p
@@ -148,7 +148,7 @@ const PlatformSection = () => {
               margin: '0 auto'
             }}
           >
-            Choose your platform and start your epic journey. Your progress syncs seamlessly across all devices.
+            오늘부터 웹 앱으로 시작하세요. 모바일 앱은 곧 출시될 예정입니다.
           </motion.p>
         </motion.div>
 
@@ -369,7 +369,7 @@ const PlatformSection = () => {
             color: 'white',
             marginBottom: '16px'
           }}>
-            Seamless Cross-Platform Experience
+            원활한 크로스 플랫폼 경험
           </h3>
           
           <p style={{
@@ -379,7 +379,7 @@ const PlatformSection = () => {
             maxWidth: '600px',
             margin: '0 auto 48px'
           }}>
-            Your quests, progress, and achievements follow you everywhere. Start on web, continue on mobile, and never miss a beat.
+            모바일 앱이 출시되면 모든 플랫폼에서 퀘스트와 진행 상황이 원활하게 동기화됩니다.
           </p>
 
           <div style={{
@@ -461,3 +461,4 @@ const PlatformSection = () => {
 }
 
 export default PlatformSection
+

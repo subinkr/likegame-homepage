@@ -13,32 +13,32 @@ const HowItWorksSection = () => {
     {
       number: "01",
       icon: PlusCircle,
-      title: "Create or Choose a Quest Template",
-      description: "Start by creating your own quest or browse our marketplace of pre-made templates. Choose from productivity, fitness, learning, or custom categories.",
+      title: "퀘스트 생성 또는 템플릿 선택",
+      description: "새로운 퀘스트를 직접 생성하거나 기본 일일 루틴, 프로그래밍 마스터 로드맵 등 다양한 템플릿을 선택하세요.",
       color: "#667eea",
       gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
     },
     {
       number: "02",
       icon: Play,
-      title: "Complete Tasks and Earn Experience",
-      description: "Break down your quest into manageable tasks. Complete them to earn XP, unlock achievements, and see your progress in real-time.",
+      title: "서브태스크 완료 및 진행률 업데이트",
+      description: "퀘스트를 서브태스크로 나누어 단계별로 완료하세요. 각 단계를 완료할 때마다 진행률이 업데이트되고 실시간으로 확인할 수 있습니다.",
       color: "#f093fb",
       gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"
     },
     {
       number: "03",
       icon: TrendingUp,
-      title: "Level Up Your Skills and Unlock Achievements",
-      description: "Watch your skills grow as you consistently complete quests. Unlock badges, level up different skill trees, and track your personal growth.",
+      title: "스탯 레벨업 및 마일스톤 달성",
+      description: "퀘스트를 완료하면서 근력, 민첩, 지구력 등의 스탯을 레벨업하세요. 마일스톤을 달성하면 축하 팝업과 함께 성취감을 느낄 수 있습니다.",
       color: "#43e97b",
       gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"
     },
     {
       number: "04",
       icon: Share2,
-      title: "Share Your Progress with Friends",
-      description: "Celebrate your wins by sharing achievements with your community. Build accountability through social features and inspire others.",
+      title: "프로필에서 성과 확인",
+      description: "완료한 퀘스트 수와 보유한 스킬 수를 프로필에서 확인하세요. 개인적인 성장 기록을 한눈에 볼 수 있습니다.",
       color: "#fa709a",
       gradient: "linear-gradient(135deg, #fa709a 0%, #fee140 100%)"
     }
@@ -88,7 +88,6 @@ const HowItWorksSection = () => {
               marginBottom: '24px'
             }}
           >
-            How{' '}
             <span style={{
               background: 'var(--secondary-gradient)',
               WebkitBackgroundClip: 'text',
@@ -96,7 +95,7 @@ const HowItWorksSection = () => {
             }}>
               LikeGame
             </span>{' '}
-            Works
+            사용법
           </motion.h2>
           <motion.p
             style={{
@@ -106,7 +105,7 @@ const HowItWorksSection = () => {
               margin: '0 auto'
             }}
           >
-            Transform your productivity in four simple steps. Start your journey from tasks to epic quests today.
+            네 가지 간단한 단계로 생산성을 변화시키세요. 오늘부터 작업을 에픽 퀘스트로 바꾸는 여정을 시작하세요.
           </motion.p>
         </motion.div>
 
@@ -355,23 +354,23 @@ const HowItWorksSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <motion.a
-            href="https://app.likegame.life"
-            className="btn btn-primary"
-            style={{ 
-              fontSize: '1.2rem', 
-              padding: '16px 32px',
-              background: 'var(--primary-gradient)',
-              boxShadow: '0 8px 32px rgba(102, 126, 234, 0.4)'
-            }}
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: '0 12px 40px rgba(102, 126, 234, 0.6)'
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Start Your Epic Journey
-          </motion.a>
+                      <motion.a
+              href="https://app.likegame.life"
+              className="btn btn-primary"
+              style={{ 
+                fontSize: '1.2rem', 
+                padding: '16px 32px',
+                background: 'var(--primary-gradient)',
+                boxShadow: '0 8px 32px rgba(102, 126, 234, 0.4)'
+              }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: '0 12px 40px rgba(102, 126, 234, 0.6)'
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Start Your Journey
+            </motion.a>
         </motion.div>
       </div>
 
@@ -404,3 +403,4 @@ const HowItWorksSection = () => {
 }
 
 export default HowItWorksSection
+

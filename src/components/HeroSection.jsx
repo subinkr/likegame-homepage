@@ -62,14 +62,15 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Transform Your Tasks Into{' '}
+              일상의 작업을{' '}
               <span className="gradient-text" style={{
                 background: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
-                Epic Quests
+                에픽 퀘스트
               </span>
+              로 변환하세요
             </motion.h1>
 
             <motion.p
@@ -83,7 +84,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Level up your productivity with gamified task management. Turn everyday tasks into adventures and unlock your potential.
+              게임화된 태스크 관리로 생산성을 레벨업하세요. 일상의 작업을 모험으로 바꾸고 잠재력을 깨워보세요.
             </motion.p>
 
             {/* Download Buttons */}
@@ -107,7 +108,7 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Globe size={20} />
-                  Play on Web
+                  웹에서 시작하기
                 </motion.a>
 
                 <motion.a
@@ -118,7 +119,7 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Download size={20} />
-                  Download App
+                  앱 다운로드
                 </motion.a>
               </div>
 
@@ -136,7 +137,7 @@ const HeroSection = () => {
                     style={{ width: '20px', height: '20px' }}
                     onError={(e) => e.target.style.display = 'none'}
                   />
-                  App Store
+                  앱스토어
                 </motion.a>
 
                 <motion.a
@@ -147,12 +148,12 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Smartphone size={20} />
-                  Google Play
+                  구글 플레이
                 </motion.a>
               </div>
             </motion.div>
 
-            {/* Stats */}
+            {/* Key Benefits */}
             <motion.div
               style={{
                 display: 'flex',
@@ -164,16 +165,16 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: '700', color: 'white' }}>10K+</div>
-                <div style={{ fontSize: '0.9rem' }}>Active Questers</div>
+                <div style={{ fontSize: '2rem', fontWeight: '700', color: 'white' }}>🎯</div>
+                <div style={{ fontSize: '0.9rem' }}>게임화된 작업</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: '700', color: 'white' }}>50K+</div>
-                <div style={{ fontSize: '0.9rem' }}>Quests Completed</div>
+                <div style={{ fontSize: '2rem', fontWeight: '700', color: 'white' }}>⚡</div>
+                <div style={{ fontSize: '0.9rem' }}>즉시 시작</div>
               </div>
               <div>
-                <div style={{ fontSize: '2rem', fontWeight: '700', color: 'white' }}>4.8★</div>
-                <div style={{ fontSize: '0.9rem' }}>User Rating</div>
+                <div style={{ fontSize: '2rem', fontWeight: '700', color: 'white' }}>🔄</div>
+                <div style={{ fontSize: '0.9rem' }}>크로스 플랫폼</div>
               </div>
             </motion.div>
           </motion.div>
@@ -223,17 +224,17 @@ const HeroSection = () => {
                     marginRight: '12px'
                   }}></div>
                   <div>
-                    <div style={{ fontWeight: '600', fontSize: '18px' }}>Daily Quests</div>
-                    <div style={{ fontSize: '14px', opacity: '0.7' }}>Level 15 • 2,840 XP</div>
+                                      <div style={{ fontWeight: '600', fontSize: '18px' }}>일일 퀘스트</div>
+                  <div style={{ fontSize: '14px', opacity: '0.7' }}>레벨 15 • 2,840 XP</div>
                   </div>
                 </div>
 
                 {/* Quest Items */}
                 {[
-                  { title: '🏃‍♂️ Morning Workout', xp: '+50 XP', completed: true },
-                  { title: '📚 Read 30 Minutes', xp: '+30 XP', completed: true },
-                  { title: '💻 Code Review', xp: '+100 XP', completed: false },
-                  { title: '🧘‍♀️ Meditation', xp: '+25 XP', completed: false }
+                  { title: '🏃‍♂️ 인클라인 푸시업을 12회 했다', xp: 'Lv.41', completed: true },
+                  { title: '💪 불가리안 스플릿 스쿼트를 양쪽 각 8회 했다', xp: 'Lv.42', completed: false },
+                  { title: '🦵 싱글 레그 카프 레이즈를 양쪽 각 15회 했다', xp: 'Lv.43', completed: false },
+                  { title: '🏋️ 힙 힌지를 20회 했다', xp: 'Lv.44', completed: true }
                 ].map((quest, index) => (
                   <motion.div
                     key={index}
@@ -280,8 +281,8 @@ const HeroSection = () => {
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: 1 }}
                 >
-                  <div style={{ fontSize: '14px', marginBottom: '4px' }}>Daily Progress</div>
-                  <div style={{ fontSize: '20px', fontWeight: '700' }}>180 / 205 XP</div>
+                  <div style={{ fontSize: '14px', marginBottom: '4px' }}>C 등급 진행률</div>
+                  <div style={{ fontSize: '20px', fontWeight: '700' }}>2/20</div>
                 </motion.div>
               </div>
             </motion.div>
@@ -356,7 +357,7 @@ const HeroSection = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <div style={{ fontSize: '14px', marginBottom: '8px' }}>Scroll to explore</div>
+          <div style={{ fontSize: '14px', marginBottom: '8px' }}>스크롤하여 탐험하기</div>
           <div style={{ fontSize: '24px' }}>↓</div>
         </motion.div>
       </div>
@@ -388,3 +389,4 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+

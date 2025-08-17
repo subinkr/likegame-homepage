@@ -11,32 +11,32 @@ import {
 } from 'lucide-react'
 
 const CTASection = () => {
-  const stats = [
+  const features = [
     {
       icon: Users,
-      number: "10K+",
-      label: "Active Users",
+      title: "스탯 시스템",
+      description: "근력, 민첩, 지구력 등 다양한 스탯 관리",
       color: "#667eea"
     },
     {
       icon: Trophy,
-      number: "50K+",
-      label: "Quests Completed",
+      title: "마일스톤 시스템",
+      description: "퀘스트 완료 시 축하 팝업과 성취감",
       color: "#f093fb"
     },
     {
       icon: Star,
-      number: "4.8★",
-      label: "User Rating",
+      title: "템플릿 시스템",
+      description: "다양한 카테고리의 퀘스트 템플릿 제공",
       color: "#43e97b"
     }
   ]
 
   const benefits = [
-    "✅ No registration required for web version",
-    "✅ Free forever with premium features",
-    "✅ Cross-platform synchronization",
-    "✅ Regular updates and new features"
+    "✅ 웹 버전 회원가입 불필요",
+    "✅ 무료로 사용 가능",
+    "✅ 모바일 앱 출시 예정",
+    "✅ 정기적인 업데이트 및 개선"
   ]
 
   return (
@@ -111,27 +111,27 @@ const CTASection = () => {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
             }}>
-              Epic Journey
+              게임화된 여정
             </span>{' '}
-            Today
+            을 시작하세요
           </motion.h2>
 
           {/* Description */}
-          <motion.p
-            style={{
-              fontSize: '1.3rem',
-              color: 'rgba(255, 255, 255, 0.8)',
-              maxWidth: '700px',
-              margin: '0 auto 48px',
-              lineHeight: '1.6'
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            Transform your daily tasks into exciting quests. Join thousands of users who have already leveled up their productivity.
-          </motion.p>
+                      <motion.p
+              style={{
+                fontSize: '1.3rem',
+                color: 'rgba(255, 255, 255, 0.8)',
+                maxWidth: '700px',
+                margin: '0 auto 48px',
+                lineHeight: '1.6'
+              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              일상의 작업을 흥미진진한 퀘스트로 변환하세요. 게임화된 접근 방식으로 오늘부터 생산성 여정을 시작하세요.
+            </motion.p>
 
           {/* Main Action Buttons */}
           <motion.div
@@ -185,7 +185,7 @@ const CTASection = () => {
                 }}
               />
               <Globe size={20} style={{ zIndex: 2 }} />
-              <span style={{ zIndex: 2 }}>Play on Web - Free</span>
+              <span style={{ zIndex: 2 }}>웹에서 시작하기</span>
             </motion.a>
 
             <motion.a
@@ -199,7 +199,7 @@ const CTASection = () => {
               whileTap={{ scale: 0.95 }}
             >
               <Download size={20} />
-              Download Apps
+              앱 다운로드
             </motion.a>
           </motion.div>
 
@@ -236,7 +236,7 @@ const CTASection = () => {
           </motion.div>
         </motion.div>
 
-        {/* Stats Section */}
+        {/* Features Section */}
         <motion.div
           className="glass"
           style={{
@@ -254,11 +254,11 @@ const CTASection = () => {
         >
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gap: '40px',
             textAlign: 'center'
           }}>
-            {stats.map((stat, index) => (
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
@@ -272,7 +272,7 @@ const CTASection = () => {
                     width: '60px',
                     height: '60px',
                     borderRadius: '50%',
-                    background: `linear-gradient(135deg, ${stat.color}, ${stat.color}80)`,
+                    background: `linear-gradient(135deg, ${feature.color}, ${feature.color}80)`,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -281,30 +281,25 @@ const CTASection = () => {
                   whileHover={{ scale: 1.1, rotate: 360 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <stat.icon size={28} color="white" />
+                  <feature.icon size={28} color="white" />
                 </motion.div>
                 
-                <motion.div
-                  style={{
-                    fontSize: '2.5rem',
-                    fontWeight: '800',
-                    color: 'white',
-                    marginBottom: '8px'
-                  }}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.3 * index }}
-                  viewport={{ once: true }}
-                >
-                  {stat.number}
-                </motion.div>
-                
-                <div style={{
-                  color: 'rgba(255, 255, 255, 0.7)',
-                  fontSize: '1rem'
+                <h4 style={{
+                  fontSize: '1.3rem',
+                  fontWeight: '700',
+                  color: 'white',
+                  marginBottom: '8px'
                 }}>
-                  {stat.label}
-                </div>
+                  {feature.title}
+                </h4>
+                
+                <p style={{
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  fontSize: '0.95rem',
+                  lineHeight: '1.5'
+                }}>
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -343,7 +338,7 @@ const CTASection = () => {
               color: 'white',
               marginBottom: '16px'
             }}>
-              Your Adventure Awaits
+              당신의 모험이 기다리고 있습니다
             </h3>
             
             <p style={{
@@ -353,7 +348,7 @@ const CTASection = () => {
               maxWidth: '500px',
               margin: '0 auto 32px'
             }}>
-              Don't let another day pass without progress. Start your first quest now and discover what you're truly capable of.
+              또 다른 하루를 진전 없이 보내지 마세요. 지금 생산성 여정을 시작하고 당신이 진정으로 할 수 있는 것을 발견하세요.
             </p>
 
             <motion.a
@@ -373,7 +368,7 @@ const CTASection = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              Begin Your Quest
+              지금 시작하기
               <ArrowRight size={20} />
             </motion.a>
           </div>
@@ -422,7 +417,7 @@ const CTASection = () => {
             color: 'rgba(255, 255, 255, 0.6)',
             fontSize: '0.9rem'
           }}>
-            © 2024 LikeGame. Transform your tasks into epic quests.
+            © 2024 LikeGame. 일상의 작업을 에픽 퀘스트로 변환하세요.
           </p>
         </motion.div>
       </div>
@@ -456,3 +451,4 @@ const CTASection = () => {
 }
 
 export default CTASection
+
